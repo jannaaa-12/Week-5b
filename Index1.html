@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Smiley (SVG)</title>
+  <link rel="stylesheet" href="Style1.css"/>
+</head>
+<body>
+  <!-- Top-left assignment label -->
+  <div class="label">Jana Mohsen, Week 5b Assignment</div>
+
+  <h1>Click the smiley to change its color</h1>
+
+  <!-- Inline SVG -->
+  <div class="svg-wrap">
+    <svg id="smiley" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 491" aria-labelledby="title desc" role="img">
+      <title id="title">Interactive Smiley Face</title>
+      <desc id="desc">A simple smiley face that changes color when clicked.</desc>
+
+      <defs>
+        <style>
+          .cls-1 { fill: #a66615; stroke: #603813; }
+          .cls-1, .cls-2, .cls-3 { stroke-miterlimit: 10; }
+          .cls-3 { fill: #fce540; stroke: #ffd235; }
+        </style>
+      </defs>
+
+      <!-- Face -->
+      <ellipse id="face" class="cls-3" cx="245" cy="245.5" rx="244.5" ry="245"/>
+
+      <!-- Eyes -->
+      <ellipse id="eyeLeft"  class="cls-1" cx="150" cy="201" rx="30.5" ry="74.5"/>
+      <ellipse id="eyeRight" class="cls-1" cx="329" cy="201" rx="30.5" ry="74.5"/>
+
+      <!-- Mouth (custom peach fill) -->
+      <circle id="mouth" cx="245" cy="365" r="58.5" fill="#ffe5b4" stroke="#231f20" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <p class="hint">Tip: you can also press the spacebar to change the color.</p>
+
+  <script src="Script.js"></script>
+</body>
+</html>
